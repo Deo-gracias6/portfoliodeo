@@ -7,13 +7,13 @@ const aboutSections = [
     {
         id: 1,
         title: "Développeuse Frontend",
-        description: "Je suis un développeur frontend avec une bonne expérience.",
+        description: "Je suis une développeuse frontend avec une bonne expérience.",
         icon: <LetterText className="text-accent scale-150" />,
     },
     {
         id: 2,
         title: "Développeuse Backend",
-        description: "Je maîtrise les bases du développement backend pour créer des APIs robustes.",
+        description: "Je maîtrise les bases du développement backend pour créer des APIs.",
         icon: <CalendarSync className="text-accent scale-150" />,
     },
     {

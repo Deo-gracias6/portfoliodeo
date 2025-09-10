@@ -8,8 +8,7 @@ export const Home = () => {
         <div className='flex flex-col'>
            <h1 className='text-5xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0'>Bonjour ; <br />je suis <span className='text-accent'>Deo-gracias AGBIDI</span></h1> 
 
-           <p className='my-4 text-md text-center md:text-left'>Je suis une developpeuse Fullstack <br /> avec 1ans d'expérience utilisant tailwindcss <br />et laravel.
-           Contactez-moi si vous aviez besins de mes services</p>
+           <p className='my-4 text-md text-center md:text-left'>Développeuse Fullstack avec 1 an d’expérience <br /> spécialisée en Tailwind CSS et Laravel. <br /> Contactez-moi pour vos besoins en développement web.</p>
            <div className='flex flex-row gap-x-4 mt-4'>
           <a 
             href="https://wa.me/22948046278?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services%20de%20d%C3%A9veloppement%20web." 

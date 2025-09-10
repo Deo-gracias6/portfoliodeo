@@ -1,13 +1,14 @@
 import Title from "./Title"
-
 import img1 from '../assets/projects/1.png';
-import tache  from'../assets/projects/tache.jpg';
+import tache from '../assets/projects/tache.jpg';
 import poubelle from '../assets/projects/poubelle.png';
 import port from '../assets/projects/portfolioph.png';
 import formation from '../assets/projects/formation.jpg';
 import immo from '../assets/projects/immo.jpg';
+// Importez les images pour les nouveaux projets
+import calaviCourse from '../assets/projects/imagelivreurr.jpg';
+import cilAssocies from '../assets/projects/favicon1.png';
 import { Github, Video } from "lucide-react";
-
 
 const projects = [
     {
@@ -23,7 +24,7 @@ const projects = [
         id: 2,
         title: 'Ma poubelle',
         description: 'Application web de gestion des déchets. Permet aux utilisateurs de localiser les poubelles intelligentes, recevoir des rappels de tri, et suivre les jours de collecte.',
-        technologies:  ['Boostrap', 'laravel', 'MySql'],
+        technologies: ['Boostrap', 'laravel', 'MySql'],
         demoLink: '#',
         repoLink: 'https://github.com/Benisgs/Poubelle',
         image: poubelle,
@@ -35,13 +36,13 @@ const projects = [
         technologies: ['Boostrap', 'laravel', 'MySql'],
         demoLink: '#',
         repoLink: 'https://github.com/ShrisbySamuel/immo_deo',
-        image:immo,
+        image: immo,
     },
     {
         id: 4,
         title: 'Gestion de tâches',
         description: 'Appli simple et intuitive pour créer, modifier et supprimer des tâches. Permet d’organiser les activités quotidiennes avec une interface claire et réactive. Développée avec JavaScript, parfois intégrée dans des tests avec Vue.js ou pour des démos rapides',
-        technologies: [ 'MongoDB', 'Express.js'],
+        technologies: ['MongoDB', 'Express.js'],
         demoLink: '#',
         repoLink: '#',
         image: tache,
@@ -57,13 +58,31 @@ const projects = [
     },
     {
         id: 6,
-        title: ' Plateforme de Formation',
-        description: 'Interface d’inscription et de connexion pour une plateforme éducative. Gestion des utilisateurs avec Firebase, design responsive en Tailwind CSS.',
-        technologies: ['Firebase', 'TailwindCss','vue.js'],
+        title: 'Plateforme de Formation',
+        description: 'Interface dinscription et de connexion pour une plateforme éducative. Gestion des utilisateurs avec Firebase, design responsive en Tailwind CSS.',
+        technologies: ['Firebase', 'TailwindCss', 'vue.js'],
         demoLink: 'https://app-for.vercel.app/',
         repoLink: 'https://github.com/Benisgs/vue-js/tree/master/vue-js',
-        image:formation,
+        image: formation,
     },
+    {
+        id: 7,
+        title: 'Calavi Course',
+        description: 'Application de réservation de courses en ligne pour la ville de Calavi. Permet aux utilisateurs de commander des courses, suivre les livreurs en temps réel et payer électroniquement.',
+        technologies: ['React Native', 'Node.js', 'MongoDB', 'Firebase'],
+        demoLink: 'https://deo-gracias6.github.io/Calavi-livraison/', // Remplacez par le lien de démo
+        repoLink: 'https://github.com/Deo-gracias6/Calavi-livraison', // Remplacez par le lien du repository
+        image: calaviCourse, // Assurez-vous d'importer l'image
+    },
+    {
+        id: 8,
+        title: 'CIL & ASSOCIES - Site Web',
+        description: 'Site vitrine professionnel pour le cabinet d\'expertise comptable CIL & ASSOCIES. Présentation des services, de l\'équipe et formulaire de contact.',
+        technologies: ['Html', 'TailwindCss', 'PHP', 'MySQL'],
+        demoLink: 'https://cilassocies.com/', 
+        repoLink: 'https://github.com/Deo-gracias6/CIL', // Laissez vide si ce n'est pas open source
+        image: cilAssocies, // Assurez-vous d'importer l'image
+    }
 ];
 
 const Projects = () => {
@@ -83,11 +102,10 @@ const Projects = () => {
                                 {project.title}
                             </h1>
                             <p className="text-sm">{project.description}</p>
-
                         </div>
                         <div className="flex flex-wrap gap-2 my-3">
-                            {project.technologies.map((tech) => (
-                                <span className="badge badge-accent badge-sm">
+                            {project.technologies.map((tech, index) => (
+                                <span key={index} className="badge badge-accent badge-sm">
                                     {tech}
                                 </span>
                             ))}
@@ -97,7 +115,6 @@ const Projects = () => {
                                 Demo
                                 <Video className="w-4" />
                             </a>
-
                             <a className="btn btn-neutral w-1/3 ml-2" href={project.repoLink}>
                                 <Github className="w-4" />
                             </a>
@@ -109,4 +126,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Projects;
